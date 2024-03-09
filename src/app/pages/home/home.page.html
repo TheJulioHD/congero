@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Congresos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">home</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let item of congresos; let i = index">
+        <ion-card (click)="onClick(item.idCongreso)">
+          <ion-card-subtitle>
+            <span>{{i+1}}</span>. 
+            <span>Congreso</span>
+          </ion-card-subtitle>
+          <ion-card-title>
+            {{item.congreso}}
+          </ion-card-title>
+          <ion-img
+            *ngIf="item.img"
+            [src]="item.img"
+          ></ion-img>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

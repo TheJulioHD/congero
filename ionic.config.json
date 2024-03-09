@@ -1,0 +1,7 @@
+{
+  "name": "Congresos",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
