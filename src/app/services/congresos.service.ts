@@ -11,4 +11,7 @@ export class CongresosService {
   getAll(){
     return this.http.get('https://localhost:44358/Cargar');
   }
+  getByID(idCongreso:number){
+    return this.http.get('https://localhost:44358/CargarByID?idCongreso='+ idCongreso);
+  }
 }

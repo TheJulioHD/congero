@@ -1,5 +1,8 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
     <ion-title>Congreso Details</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -10,4 +13,27 @@
       <ion-title size="large">Congreso Details</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="">{{lstcongreso.congreso}}</ion-card-title>
+      <ion-card-subtitle>Congreso:</ion-card-subtitle>
+   
+    </ion-card-header>
+  </ion-card>
+{{comngresos.congreso}}
+
+
+  <ion-input label="Solid input" label-placement="floating" [(ngModel)]="comngresos.congreso" fill="solid" placeholder="Enter text"></ion-input>
+  <ion-input label="Solid input" label-placement="floating" [(ngModel)]="comngresos.nombre" fill="solid" placeholder="Enter text"></ion-input>
+  <ion-button (click)="guardar()">Default</ion-button>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="">{{lstcongreso.congreso}}</ion-card-title>
+      <ion-card-subtitle>Congreso:</ion-card-subtitle>
+      <ion-card-title class="">{{lstcongreso.congreso}}</ion-card-title>
+      <ion-card-subtitle>Congreso:</ion-card-subtitle>
+   
+    </ion-card-header>
+  </ion-card>
 </ion-content>
